@@ -28,7 +28,7 @@ p {
 }
 
 body {
-  font-family: 'Source Serif Pro', serif;
+  font-family: "Source Serif Pro", serif;
   font-size: 25px;
   font-weight: 300;
 }
@@ -38,9 +38,94 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+.container__medium {
+  max-width: 1590px;
+  margin: 0 auto;
+}
+
 .container__big {
+  // max-width: 1920px;
   max-width: 100%;
   margin: 0 auto;
   // padding: 0 15px;
 }
 
+.section__name {
+  &-content {
+    display: flex;
+    justify-content: center;
+    padding-top: 110px;
+    height: 100%;
+    // margin-bottom: 115px;
+  }
+  &-title {
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 33px;
+    font-weight: 600;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 308px;
+      height: 1px;
+      background-color: #a8a8a8;
+      top: 13px;
+      left: 190px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 308px;
+      height: 1px;
+      background-color: #a8a8a8;
+      top: 13px;
+      right: 190px;
+    }
+    &-linetop {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 218px;
+        height: 1px;
+        background-color: $gold;
+        top: 0px;
+        left: 190px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 218px;
+        height: 1px;
+        background-color: $gold;
+        top: 0px;
+        right: 26px;
+      }
+    }
+    &-linebottom {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 218px;
+        height: 1px;
+        background-color: $gold;
+        bottom: 10px;
+        left: 26px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 218px;
+        height: 1px;
+        background-color: $gold;
+        bottom: 10px;
+        right: 190px;
+      }
+    }
+  }
+  &-text {
+  }
+}

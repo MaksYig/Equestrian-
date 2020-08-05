@@ -115,6 +115,19 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 46px;
+    background-color: #363636;
+    top: 15px;
+    left: 50%;
+    right: 50%;
+     transform: translateX(-50%);
+    z-index: -1;
+  }
   &-text {
     color: $gold;
     font-size: 18px;
@@ -146,10 +159,198 @@
   &-item {
     img {
       height: 100vh;
+      width: 100%;
     }
   }
 }
 
 /* End header */
+/* Start welcome section */
+.welcome{
+  background-color: #e5e5e5;
+  &__wrapper{
+    background-repeat: no-repeat;
+    background-position:  right;
+    background-size: contain;
+    background-position-y: 80px ;
+  }
+  &__box{
+    padding-top: 115px;
+    padding-bottom: 145px;
+  }
+  &__text{
+    max-width: 630px;
+    font-size: 22px;
+    line-height: 35px;
+    color: #000000;
+    padding-left: 15px;
+    margin-bottom: 65px;
+    
+    p{
+      color: $gold;
+      margin-top: 40px;
+    }
+  }
+  &__btn{
+    padding-left: 15px;
+    position: relative;
+    margin-bottom: 55px;
+    &::after{
+      content: "";
+      position: absolute;
+      width: 215px;
+      height: 1px;
+      top: 40px;
+      background-color: $gold;
+    }
+    a{
+      font-size: 20px;
+      line-height: 35px;
+      color:$gold;
+      text-transform: uppercase;
+      border: 1px solid $gold;
+      width: 232px;
+      padding: 25px 0px;
+      text-align: center;
+     
+    }
+  }
+  &__subtext{
+    font-size: 20px;
+    background-image: 35px;
+    padding-left: 15px;
+    a{
+      color: $gold;
+      text-transform: uppercase;
+    }
+  }
+}
 
+/* End welcome section */
+
+/* Start member section */
+.member{
+
+  &__wrapper{
+
+  }
+  &__box-wrapper{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+  &__box{
+  width: 50%;
+  text-align: center;
+  padding-bottom: 80px;
+  &:first-child{
+    .member__title{
+      padding-top: 80px;
+      margin-bottom: 50px;
+    }
+    .member__text{
+      max-width:580px;
+      margin: 0 auto 50px auto;
+    }
+    .member__btn{
+     
+    }
+  }
+  &:last-child{
+   
+    .member__logo{
+      padding-top: 45px;
+      margin-bottom: 35px;
+    }
+    .member__title{
+      margin-bottom: 25px;
+    }
+    .member__text{
+      margin-bottom: 40px;
+    }
+    .member__form{
+      margin-bottom: 95px;
+    }
+  }
+  }
+  &__title{
+    font-size: 33px;
+    font-weight: 600;
+    color: $gold;
+    text-transform: uppercase;
+  }
+  &__text{
+    font-size: 22px;
+    line-height: 35px;
+    color: #ffffff;
+
+
+
+
+    
+
+  }
+  &__btn{
+    a{
+      font-size: 18px;
+      font-weight: 400;
+      color: #ffffff;
+      background-color: $gold;
+      text-transform: uppercase;
+      padding: 25px 65px;
+    }
+  }
+  &__form{
+    display: flex;
+    justify-content: center;
+    input{
+      margin-right: 8px;
+      outline: none;
+      border: none;
+      padding: 0 12px;
+
+    }
+    input::placeholder{
+      font-size: 18px;
+      line-height: 35px;
+      font-weight: 600;
+      color: #c0bebe;
+
+    }
+  }
+}
+.member__slider{
+  width: 100%;
+  height: 100%;
+
+  &-wrapper{
+    position: relative;
+    &::after{
+      content: "";
+      position: absolute;
+      background-color: rgb(17, 17, 17);
+      opacity: 0.561;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      
+    }
+  }
+  &-items{
+    height: 100%;
+  }
+}
+.member__item{
+  img{
+    width: 100%;
+    height: 474px;
+  }
+  }
+
+
+
+
+/* End member section */
 @import "media";
