@@ -51,11 +51,19 @@ body {
 }
 
 .section__name {
+  display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    z-index: 1;
   &-content {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items:center;
     padding-top: 110px;
     height: 100%;
+    margin-bottom: 55px;
     // margin-bottom: 115px;
   }
   &-title {
@@ -64,6 +72,9 @@ body {
     font-size: 33px;
     font-weight: 600;
     position: relative;
+    line-height: 35px;
+    padding-left: 308px;
+    padding-right: 308px;
 
     &::before {
       content: "";
@@ -72,7 +83,7 @@ body {
       height: 1px;
       background-color: #a8a8a8;
       top: 13px;
-      left: 190px;
+      left: -15px;
     }
     &::after {
       content: "";
@@ -81,51 +92,40 @@ body {
       height: 1px;
       background-color: #a8a8a8;
       top: 13px;
-      right: 190px;
-    }
-    &-linetop {
-      position: relative;
-      &::before {
+      right: -15px;
+      &::after{
         content: "";
         position: absolute;
-        width: 218px;
+        width: 208px;
         height: 1px;
-        background-color: $gold;
-        top: 0px;
-        left: 190px;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        width: 218px;
-        height: 1px;
-        background-color: $gold;
-        top: 0px;
-        right: 26px;
+        background-color:$gold;
+        top: 13px;
+        right: -15px;
       }
     }
-    &-linebottom {
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        width: 218px;
-        height: 1px;
-        background-color: $gold;
-        bottom: 10px;
-        left: 26px;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        width: 218px;
-        height: 1px;
-        background-color: $gold;
-        bottom: 10px;
-        right: 190px;
-      }
-    }
+    // &-linetop {
+    //   position: relative;
+    //   &::after {
+    //     content: "";
+    //     position: absolute;
+    //     width: 208px;
+    //     height: 1px;
+    //     background-color: $gold;
+    //     top: 0px;
+    //     right: 0px;
+    //   }
+    // }
   }
   &-text {
+    font-size: 22px;
+    line-height: 35px;
+    font-weight: 600;
+    color: $gold;
+    text-align: center;
+    max-width: 990px;
+    margin-bottom: 80px;
+    justify-content: center;
+    z-index: 1;
+
   }
 }

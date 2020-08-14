@@ -353,4 +353,91 @@
 
 
 /* End member section */
+
+/* Start Services */
+.services{
+  padding-bottom: 80px;
+  &__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  &__item{
+    a{
+      img{
+        max-width: 560px;
+      }
+    }
+  }
+  }
+
+/* End Services */
+
+/* start price section */
+.price{
+  
+  &__wrapper{
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 85px;
+    &:before{
+      position: absolute;
+      content: "";
+      background: rgba(0, 0, 0, 0.67);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+    }
+    .section__name{
+
+      &-content{
+
+      }
+      &-title{
+
+      }
+    }
+  }
+  &__item{
+    max-width: 328px;
+    text-align: center;
+    border: 1px solid $gold;
+    z-index: 1;
+    
+    &-wrapper{
+      display: flex;
+      justify-content: space-between;
+    }
+    &-title{
+      text-transform: uppercase;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 25px 0 10px 0;
+      font-size: 20px;
+
+    }
+    &-price{
+      font-size: 40px;
+      color: #ffffff;
+      font-weight: 600;
+      padding-bottom: 22px;
+      border-bottom: 1px solid $gold;
+    }
+    &-text{
+      padding: 50px 25px;
+      font-size: 25px;
+      color: #ffffff;
+      line-height: 35px;
+    }
+  }
+}
+
+
+
+
+/* end price section */
 @import "media";
